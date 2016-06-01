@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   		params[:user][:sex] = params[:user][:sex].to_i
 	    @user = User.new(user_params)
 	    if @user.save
+	      log_in @user
 	      flash[:success] = "Chao mung " + @user.name + " den voi trang web cua toi! #{@user.sex}"
 	      redirect_to @user
 	    else
