@@ -13,7 +13,7 @@
       <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :sex %>
-      <%= f.select :sex, options_for_select(User.sexes)%>
+      <%= f.select :sex, options_for_select(User.sexes.map {|k, v| [k, v]})%>
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
