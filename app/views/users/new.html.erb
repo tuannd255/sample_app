@@ -14,7 +14,7 @@
 
   	  
       <%= f.label :sex %>
-      <%= f.select :sex, options_for_select(User.sexes.map {|k, v| [k, v]})%>
+      <%= f.select :sex, options_for_select(User.sexes.map {|k, v| [k, k]})%>
 
 
       <%= f.label :password %>
